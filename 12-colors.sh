@@ -19,6 +19,7 @@ VALIDATE(){
         echo -e "$2...$G SUCCESS $N"
     fi 
 }
+
 if  [ $USERID -ne 0 ]
 then
     echo "plase run this script with root access."
@@ -34,4 +35,4 @@ dnf install git -y &>>$LOGFILE
 VALIDATE $? "Installing Git"
 
 dnf install dockerr -y &>>$LOGFILE
-VALIDATE $? "Installing Docker"
+VALIDATE $? "Installing Docker
