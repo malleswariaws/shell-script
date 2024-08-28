@@ -33,7 +33,7 @@ do
    dnf list installed $i &>>$LOGFILE
    if [ $? -eq 0 ]
    then
-       echo -e "$I already installed...$Y SKIPPING $N"
+       echo -e "$i already installed...$Y SKIPPING $N"
     else
         dnf install $i -y &>>$LOGFILE
         VALIDATE $? "installation of $i"
